@@ -46,7 +46,7 @@ span {
 .previous,
 .next,
 .perform {
-  position: absolute;
+  position: fixed;
   bottom: 50px;
 
   width: 200px;
