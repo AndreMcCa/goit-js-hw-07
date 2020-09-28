@@ -1,0 +1,123 @@
+#boxes {
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* private code */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  margin: 0;
+  background-color: #ececec;
+
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 200px;
+  height: 50px;
+  margin-right: 50px;
+
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #7a7a7a;
+  text-align: center;
+
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: #ececec;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.input:valid {
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(0, 255, 0, 0.12);
+}
+
+.input:invalid {
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(255, 0, 0, 0.12);
+}
+
+.input:hover,
+.input:focus {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(0, 195, 255, 0.1);
+}
+
+.btn-render,
+.btn-destroy {
+  width: 200px;
+  height: 50px;
+
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+
+  background-color: #ececec;
+  border-radius: 25px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.btn-render {
+  margin-right: 50px;
+}
+
+.previous,
+.next {
+  position: fixed;
+
+  width: 200px;
+  height: 50px;
+
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #7a7a7a;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: #ececec;
+  border-radius: 25px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.previous {
+  bottom: 50px;
+  left: 50px;
+}
+
+.next {
+  bottom: 50px;
+  right: 50px;
+}

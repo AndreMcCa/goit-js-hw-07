@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task_03</title>
+    <link rel="stylesheet" href="../css/task_03.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h2>Задание 3</h2>
+      <p>Напиши скрипт для создания галлереи изображений по массиву данных.</p>
+      <p>В HTML есть список <span>ul#gallery</span>.</p>
+      <p>
+        Используй массив объектов <span>images</span> для создания тегов
+        <span>img</span>
+        вложенных в <span>li</span>. Для создания разметки используй шаблонные
+        строки и <span>insertAdjacentHTML()</span>.
+      </p>
+      <ul>
+        <li>
+          Все элементы галереи должны добавляться в DOM за одну операцию
+          вставки.
+        </li>
+        <li>
+          Добавь минимальное оформление галереи флексбоксами или гридами через
+          css-классы.
+        </li>
+      </ul>
+      <ul id="gallery"></ul>
+    </div>
+
+    <a class="previous" href="./task_02.html">previous</a>
+    <a class="perform" href="#" data-reset="true">perform</a>
+    <a class="next" href="./task_04.html">next</a>
+
+    <script src="../js/task_03.js" type="module"></script>
+  </body>
+</html>

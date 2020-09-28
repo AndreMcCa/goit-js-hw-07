@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+}
+
+body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "roboto", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+
+  background-color: #cccccc;
+}
+
+.container {
+  position: relative;
+
+  max-width: 1200px;
+  height: 100vh;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 30px);
+}
+
+.item {
+  width: calc((100% - 90px) / 4);
+
+  margin-right: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.item:nth-last-child(-n + 4) {
+  margin-bottom: 0px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 200px;
+  min-height: 80px;
+
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #333333;
+
+  background-color: #ffffff;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(-30deg) skewX(25deg) translate(0, 0);
+}
+
+.link::before {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  width: 20px;
+  height: 100%;
+
+  content: "";
+
+  background-color: #b1b1b1;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+.link::after {
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  width: 100%;
+  height: 20px;
+
+  content: "";
+
+  background-color: #ece9e6;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(0deg) skewx(-45deg);
+}
+
+.link:hover {
+  /* color: #15e38a; */
+  color: #ffffff;
+  background-color: #dd4b39;
+
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.link:hover::before {
+  background-color: #b33a2b;
+}
+
+.link:hover::after {
+  background-color: #e66a5a;
+}
