@@ -20,12 +20,14 @@ const galleryEl = document.querySelector("#gallery");
 const performTaskEl = document.querySelector(".perform");
 
 const createGallery = (array, link) => {
+  const elements = [];
   array.map((obj) =>
-    link.insertAdjacentHTML(
-      "beforeend",
+    elements.push(
       `<li><img src="${obj.url}" alt="${obj.alt}" width="480px"></li>`
     )
   );
+
+  link.insertAdjacentHTML("beforeend", elements.join(""));
 
   galleryEl.style.justifyContent = "space-around";
 };

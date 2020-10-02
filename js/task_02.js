@@ -11,13 +11,13 @@ const ingredientsItemsEl = document.querySelector("#ingredients");
 const performTaskEl = document.querySelector(".perform");
 
 const generateItems = (array, link) => {
-  const element = array.map((arr) => {
-    const element = document.createElement("li");
-    element.textContent = arr;
+  const elements = array.map((arr) => {
+    const elements = document.createElement("li");
+    elements.textContent = arr;
 
-    return element;
+    return elements;
   });
-  link.append(...element);
+  link.append(...elements);
 };
 
 performTaskEl.addEventListener("click", onPerformTask);

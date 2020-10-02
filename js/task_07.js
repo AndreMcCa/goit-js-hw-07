@@ -3,8 +3,8 @@ const textEl = document.querySelector("#text");
 
 inputEl.addEventListener("input", onСhangesFontSize);
 
-function onСhangesFontSize() {
-  textEl.style.fontSize = `${this.value}px`;
+function onСhangesFontSize(e) {
+  textEl.style.fontSize = `${e.target.value}px`;
 }
 
 //
@@ -17,8 +17,6 @@ function onСhangesFontSize() {
 const sliderEl = document.querySelector(".slider");
 const sliderBeforeEl = document.querySelector(".js-slider-before");
 const sliderValueEl = document.querySelector(".slider-value");
-
-console.log(sliderBeforeEl);
 
 inputEl.oninput = function () {
   sliderEl.style.left = `${this.value * 1.2820512821}%`;
